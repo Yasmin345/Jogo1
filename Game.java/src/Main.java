@@ -11,7 +11,7 @@ public class Main {
     int soma = 0;
     int placar_jogador = 0;
     int placar_maquina = 0;
-    int conta = 0;
+    int cont = 0;
 
     // inicializando métodos ?
     Scanner scan = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class Main {
           && num_jogador != 5) {
         System.out.print("Algo deu errado! Digite somente números de 0 a 5, Por favor tente novamente: ");
         num_jogador = scan.nextInt();
-      }
+       }
       // atribuição de numero da máquina ?
       num_maquina = random.nextInt(6);
       
@@ -74,16 +74,18 @@ public class Main {
       
       // loop para continuação do jogo
       System.out.print("Deseja continuar jogando? Digite 1 para continuar ou 2 para finalizar. ");
-      conta = scan.nextInt();
+      cont = scan.nextInt();
      // validação 
-    if (conta != 1 && conta != 2) {
+     while (cont != 1 && cont != 2) {
         System.out.print("Algo deu errado! Por favor, digite apenas 1 ou 2 e tente novamente: ");
-         conta = scan.nextInt();
-     }
-    else if (conta == 2){
-        break;
+         cont = scan.nextInt();
+        }
+     if (cont == 2) {
+     break;
+      }
+      
     }
-    }
+    System.out.println("Programa finalizado.");
    scan.close();
 
 }
